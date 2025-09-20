@@ -1,8 +1,8 @@
 import React from "react";
-import WhoIsWatching from "./pages/WhoIsWatching/WhoIsWatching";
+import WhosWatching from "./pages/WhosWatching/WhosWatching";
 
 function App() {
-  return <WhoIsWatching />;
+  return <WhosWatching />;
 }
 
 export default App;

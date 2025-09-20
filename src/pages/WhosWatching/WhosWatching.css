@@ -1,0 +1,51 @@
+.whos-watching {
+  min-height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #141414; /* Netflix black */
+  color: #808080;
+}
+
+.whos-watching h1 {
+  font-size: 3rem;
+  font-weight: 500;
+  color: #fff;
+  margin-bottom: 50px;
+}
+
+/* Flexbox layout for profiles */
+.profiles-container {
+  display: flex;
+  gap: 40px; /* space between profiles */
+  flex-wrap: wrap; /* allow wrapping on smaller screens */
+  justify-content: center;
+}
+
+.profile-card {
+  text-align: center;
+}
+
+.profile-card img {
+  border-radius: 4px;
+  width: 150px;
+  transition: transform 0.3s, border 0.3s;
+  cursor: pointer;
+}
+
+.profile-card img:hover {
+  transform: scale(1.1);
+  border: 3px solid #fff;
+}
+
+.profile-card p {
+  margin-top: 10px;
+  font-size: 1.2rem;
+  color: #808080;
+}
+
+.profile-card p:hover {
+  color: #fff;
+}
