@@ -1,0 +1,278 @@
+/* Layout.css */
+/* ===========================
+   Base
+   =========================== */
+html,
+body,
+#root {
+  min-width: 100%;
+  margin: 0;
+  padding: 0;
+  background: #141414;
+  font-family: "Netflix Sans", "Helvetica Neue", Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+/* ===========================
+   NAVBAR (Bootstrap integration)
+   =========================== */
+.navbar {
+  background: transparent;
+  transition: background 0.35s ease;
+  z-index: 1030;
+  padding: 0.5rem 1rem;
+  height: 68px;
+}
+
+/* This will override properly */
+.navbar.scrolled {
+  background-color: rgb(20, 20, 20) !important;
+  background-image: linear-gradient(180deg, #000001e6 10%, #0000);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.7);
+}
+
+.navbar-brand img {
+  height: 42px;
+  display: block;
+  object-fit: contain;
+}
+
+.navbar-nav .nav-link {
+  color: #e5e5e5 !important;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 4px 8px;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #fff !important;
+}
+
+.profile-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 4px;
+  object-fit: cover;
+  margin-right: 30px;
+}
+
+/* Netflix-style navbar toggler */
+/* Netflix-style navbar toggler */
+.navbar-toggler {
+  border: none !important; /* no border */
+  padding: 0.25rem 0.5rem;
+  position: absolute;
+  right: 80px; /* Position to the left of the profile icon */
+  top: 50%;
+  transform: translateY(-50%);
+  background: transparent; /* fully transparent background */
+  box-shadow: none !important; /* remove Bootstrap shadow */
+}
+
+/* White hamburger bars */
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255,255,255,1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+/* Hover + Focus = same (no border, no shadow) */
+.navbar-toggler:hover,
+.navbar-toggler:focus {
+  border: none !important;
+  background: transparent;
+  box-shadow: none !important;
+  outline: none;
+}
+
+/* ===========================
+   HERO / PROFILE PAGE
+   =========================== */
+.profile-page {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
+}
+
+.profile-banner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.3) 0%,
+    rgba(0, 0, 0, 0.7) 60%,
+    rgba(0, 0, 0, 0.95) 100%
+  );
+  display: flex;
+  align-items: center;
+  padding: 0 60px;
+  box-sizing: border-box;
+}
+
+.banner-content {
+  max-width: 700px;
+  color: #fff;
+  margin-top: 68px; /* Push content down to account for navbar */
+}
+
+.banner-headline {
+  font-size: 48px;
+  font-weight: 800;
+  margin: 0 0 16px;
+  color: #fff;
+}
+
+.banner-description {
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 20px;
+  color: #e5e5e5;
+}
+.banner-buttons {
+  display: flex;
+  gap: 12px; /* space between buttons */
+}
+
+/* Base button style */
+.custom-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px; /* space between icon/text */
+  width: 142px;
+  height: 43px;
+  font-weight: 700;
+  font-size: 15px;
+  border-radius: 0; /* squared edges */
+  border: none;
+  cursor: pointer;
+  text-decoration: none; /* remove underline */
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Resume button */
+.resume-btn {
+  background-color: #fff;
+  color: #000;
+}
+.resume-btn:hover {
+  background-color: #6c757d; /* grey */
+  color: #fff;
+}
+
+/* LinkedIn button */
+.linkedin-btn {
+  background-color: #fff;
+  color: #000;
+}
+.linkedin-btn:hover {
+  background-color: #0a66c2; /* LinkedIn blue */
+  color: #fff;
+}
+
+/* SVG icon inside LinkedIn */
+.linkedin-btn .icon {
+  width: 18px;
+  height: 18px;
+  fill: currentColor; /* follows text color */
+}
+
+.icon-container {
+  font-size: 18px;
+  line-height: 1;
+}
+
+/* ===========================
+   Scrollable content below hero
+   =========================== */
+.content {
+  padding: 40px 60px;
+  background: #141414;
+}
+
+.section {
+  margin-bottom: 40px;
+}
+.section-title {
+  color: #fff;
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+.card-row {
+  display: flex;
+  gap: 16px;
+  overflow-x: auto;
+  padding-bottom: 6px;
+}
+.card {
+  min-width: 200px;
+  height: 120px;
+  background: #333;
+  border-radius: 6px;
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.card-image {
+  width: 100%;
+  height: 100%;
+  background: #555;
+}
+.card-title {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.footer {
+  text-align: center;
+  color: #808080;
+  font-size: 14px;
+  padding: 20px 0;
+  border-top: 1px solid #222;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .banner-headline {
+    font-size: 40px;
+  }
+}
+@media (max-width: 768px) {
+  .banner-headline {
+    font-size: 28px;
+  }
+  .content {
+    padding: 20px;
+  }
+  .profile-banner {
+    padding: 0 20px;
+  }
+  .banner-content {
+    margin-top: 56px; /* Adjust for smaller navbar height on mobile */
+  }
+
+  /* Bootstrap mobile navbar adjustments */
+  .navbar-collapse {
+    background: rgba(0, 0, 0, 0.9);
+    padding: 1rem;
+    margin-top: 0.5rem;
+    border-radius: 4px;
+  }
+
+  .navbar-nav {
+    gap: 10px;
+  }
+}

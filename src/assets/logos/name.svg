@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+     width="1200" height="250" viewBox="0 0 1200 250">
+  <defs>
+    <!-- deeper curve -->
+    <path id="curve" d="M 50 180 Q 600 110 1150 180" />
+  </defs>
+  <text font-family="Anton, Impact, Arial Black, sans-serif"
+        font-size="120"
+        font-weight="500"
+        letter-spacing="4"
+        fill="#E31C23">
+    <textPath href="#curve" startOffset="50%" text-anchor="middle">
+      AADITYA SANGISHETTY
+    </textPath>
+  </text>
+</svg>
