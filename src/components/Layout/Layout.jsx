@@ -102,7 +102,7 @@ function Layout() {
         <div className="profile-banner">
           <div className="banner-content">
             <h1 className="banner-headline">
-              Aditya Sangishetty — Software Developer
+              Aaditya Sangishetty - Software Developer
             </h1>
             <p className="banner-description">
               Passionate and results-driven developer with experience in
@@ -161,32 +161,46 @@ function Layout() {
       </header>
 
       {/* Content */}
-      <main className="content container-fluid mt-4">
+      <main className="content container-fluid">
         <section className="section">
-          <h2 className="section-title">Today's Top Picks for Recruiter</h2>
+          <div className="section-header">
+            <h2 className="section-title">Today's Top Picks for Recruiter</h2>
+            <span className="see-all">›</span>
+          </div>
           <div className="scroll-row">
             {[
-              "Work Permit",
               "Skills",
               "Experience",
               "Certifications",
+              "Projects",
               "Recommendation",
+              "Contact Me",
             ].map((item, idx) => (
               <div className="scroll-card" key={idx}>
-                <div className="card-body">
-                  <p className="card-text">{item}</p>
+                <div className="card-overlay">
+                  <p>{item}</p>
                 </div>
               </div>
             ))}
           </div>
         </section>
 
-        <Outlet />
+        <section className="section">
+          <div className="section-header">
+            <h2 className="section-title">Continue Watching for Recruiter</h2>
+            <span className="see-all">›</span>
+          </div>
+          <div className="scroll-row">
+            {["Music", "Reading", "Contact Me"].map((item, idx) => (
+              <div className="scroll-card" key={idx}>
+                <div className="card-overlay">
+                  <p>{item}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
       </main>
-
-      <footer className="footer text-center py-3">
-        <p>© {new Date().getFullYear()} Aditya Shetty | All rights reserved</p>
-      </footer>
     </div>
   );
 }

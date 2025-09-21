@@ -91,7 +91,7 @@ body,
 .profile-page {
   position: relative;
   width: 100vw;
-  height: 75vh;
+  height: 90vh;
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
@@ -124,10 +124,11 @@ body,
 }
 
 .banner-headline {
-  font-size: 48px;
+  font-size: 2.5rem;
   font-weight: 800;
   margin: 0 0 16px;
   color: #fff;
+  white-space: nowrap; /* ✅ keep text on one line */
 }
 
 .banner-description {
@@ -190,58 +191,75 @@ body,
   line-height: 1;
 }
 
-/* ===========================
-   Scrollable content below hero
-   =========================== */
+/* Content overlays hero */
 .content {
-  padding: 40px 60px;
-  background: #141414;
+  margin-top: -80px; /* 👈 overlay into hero */
+  padding: 0 60px;
+  background: transparent;
+  position: relative;
+  z-index: 10;
 }
 
-.section {
-  margin-bottom: 40px;
+/* Section header */
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 12px 0;
 }
 .section-title {
   color: #fff;
-  font-size: 20px;
+  font-size: 22px;
   font-weight: 600;
-  margin-bottom: 16px;
 }
-.card-row {
-  display: flex;
-  gap: 16px;
-  overflow-x: auto;
-  padding-bottom: 6px;
+.see-all {
+  color: #aaa;
+  font-size: 22px;
+  cursor: pointer;
+  transition: color 0.2s;
 }
-.card {
-  min-width: 200px;
-  height: 120px;
-  background: #333;
-  border-radius: 6px;
-  position: relative;
-  overflow: hidden;
-  flex-shrink: 0;
-}
-.card-image {
-  width: 100%;
-  height: 100%;
-  background: #555;
-}
-.card-title {
-  position: absolute;
-  bottom: 10px;
-  left: 10px;
+.see-all:hover {
   color: #fff;
-  font-size: 14px;
-  font-weight: 500;
 }
 
-.footer {
-  text-align: center;
-  color: #808080;
-  font-size: 14px;
-  padding: 20px 0;
-  border-top: 1px solid #222;
+/* Scrollable row */
+.scroll-row {
+  display: flex;
+  gap: 8px;
+  overflow-x: auto;
+  padding-bottom: 20px;
+  scrollbar-width: none;
+}
+.scroll-row::-webkit-scrollbar {
+  display: none;
+}
+
+/* Cards bigger like Netflix */
+.scroll-card {
+  min-width: 300px;
+  height: 180px;
+  border-radius: 4px;
+  background: url("https://picsum.photos/600/400?random") center/cover no-repeat;
+  flex-shrink: 0;
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.scroll-card:hover {
+  transform: scale(1.15);
+  z-index: 20;
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.8);
+}
+
+/* Dark overlay + text */
+.card-overlay {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 10px;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+  color: #fff;
+  font-weight: 600;
+  font-size: 16px;
 }
 
 /* Responsive */
