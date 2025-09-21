@@ -1,4 +1,3 @@
-/* Layout.css */
 /* ===========================
    Base
    =========================== */
@@ -16,7 +15,7 @@ body,
 }
 
 /* ===========================
-   NAVBAR (Bootstrap integration)
+   NAVBAR (kept as before)
    =========================== */
 .navbar {
   background: transparent;
@@ -25,31 +24,23 @@ body,
   padding: 0.5rem 1rem;
   height: 68px;
 }
-
-/* This will override properly */
 .navbar.scrolled {
-  background-color: rgb(20, 20, 20) !important;
-  background-image: linear-gradient(180deg, #000001e6 10%, #0000);
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.7);
+  /* still supported if you want to trigger via class */
 }
-
 .navbar-brand img {
   height: 42px;
   display: block;
   object-fit: contain;
 }
-
 .navbar-nav .nav-link {
   color: #e5e5e5 !important;
   font-size: 16px;
   font-weight: 500;
   padding: 4px 8px;
 }
-
 .navbar-nav .nav-link:hover {
   color: #fff !important;
 }
-
 .profile-icon {
   width: 32px;
   height: 32px;
@@ -58,31 +49,25 @@ body,
   margin-right: 30px;
 }
 
-/* Netflix-style navbar toggler */
-/* Netflix-style navbar toggler */
+/* Navbar toggler styling */
 .navbar-toggler {
-  border: none !important; /* no border */
-  padding: 0.25rem 0.5rem;
-  position: absolute;
-  right: 80px; /* Position to the left of the profile icon */
-  top: 50%;
-  transform: translateY(-50%);
-  background: transparent; /* fully transparent background */
-  box-shadow: none !important; /* remove Bootstrap shadow */
-}
-
-/* White hamburger bars */
-.navbar-toggler-icon {
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255,255,255,1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
-}
-
-/* Hover + Focus = same (no border, no shadow) */
-.navbar-toggler:hover,
-.navbar-toggler:focus {
   border: none !important;
   background: transparent;
   box-shadow: none !important;
-  outline: none;
+}
+.navbar-toggler-icon {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 24px;
+  height: 18px;
+}
+.navbar-toggler-icon span {
+  display: block;
+  height: 2px;
+  width: 100%;
+  background-color: white;
+  border-radius: 2px;
 }
 
 /* ===========================
@@ -91,14 +76,13 @@ body,
 .profile-page {
   position: relative;
   width: 100vw;
-  height: 90vh;
+  height: 70vh;
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
   margin: 0;
   padding: 0;
 }
-
 .profile-banner {
   position: absolute;
   top: 0;
@@ -116,21 +100,18 @@ body,
   padding: 0 60px;
   box-sizing: border-box;
 }
-
 .banner-content {
   max-width: 700px;
   color: #fff;
-  margin-top: 68px; /* Push content down to account for navbar */
+  margin-top: 68px;
 }
-
 .banner-headline {
   font-size: 2.5rem;
   font-weight: 800;
   margin: 0 0 16px;
   color: #fff;
-  white-space: nowrap; /* ✅ keep text on one line */
+  white-space: nowrap;
 }
-
 .banner-description {
   font-size: 16px;
   line-height: 1.5;
@@ -139,65 +120,70 @@ body,
 }
 .banner-buttons {
   display: flex;
-  gap: 12px; /* space between buttons */
+  gap: 12px;
 }
 
-/* Base button style */
+/* Base button */
 .custom-btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 6px; /* space between icon/text */
+  gap: 6px;
   width: 142px;
   height: 43px;
   font-weight: 700;
   font-size: 15px;
-  border-radius: 0; /* squared edges */
+  border-radius: 0;
   border: none;
   cursor: pointer;
-  text-decoration: none; /* remove underline */
+  text-decoration: none;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
-
-/* Resume button */
 .resume-btn {
   background-color: #fff;
   color: #000;
 }
 .resume-btn:hover {
-  background-color: #6c757d; /* grey */
+  background-color: #6c757d;
   color: #fff;
 }
-
-/* LinkedIn button */
 .linkedin-btn {
   background-color: #fff;
   color: #000;
 }
 .linkedin-btn:hover {
-  background-color: #0a66c2; /* LinkedIn blue */
+  background-color: #0a66c2;
   color: #fff;
 }
 
-/* SVG icon inside LinkedIn */
-.linkedin-btn .icon {
-  width: 18px;
-  height: 18px;
-  fill: currentColor; /* follows text color */
-}
-
-.icon-container {
-  font-size: 18px;
-  line-height: 1;
-}
-
-/* Content overlays hero */
+/* ===========================
+   Content overlays hero + fade (so no harsh line)
+   =========================== */
 .content {
-  margin-top: -80px; /* 👈 overlay into hero */
-  padding: 0 60px;
+  margin-top: -80px; /* overlay into hero */
+  padding: 0 40px 40px;
   background: transparent;
   position: relative;
   z-index: 10;
+  box-sizing: border-box;
+}
+
+/* subtle fade to blend hero -> content */
+.content::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 140px;
+  pointer-events: none;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0),
+    rgba(20, 20, 20, 0.25),
+    rgba(20, 20, 20, 0.6)
+  );
+  z-index: 11;
 }
 
 /* Section header */
@@ -206,6 +192,8 @@ body,
   justify-content: space-between;
   align-items: center;
   margin: 12px 0;
+  z-index: 14;
+  position: relative;
 }
 .section-title {
   color: #fff;
@@ -222,50 +210,124 @@ body,
   color: #fff;
 }
 
-/* Scrollable row */
+/* ===========================
+   Scroll container + arrows
+   =========================== */
+.scroll-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
 .scroll-row {
   display: flex;
-  gap: 8px;
+  gap: 12px;
   overflow-x: auto;
-  padding-bottom: 20px;
+  padding: 20px 0;
   scrollbar-width: none;
+  scroll-behavior: smooth;
+  z-index: 12;
 }
 .scroll-row::-webkit-scrollbar {
   display: none;
 }
 
-/* Cards bigger like Netflix */
+/* arrow buttons (hidden until hover) */
+.scroll-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 30;
+  background: rgba(0, 0, 0, 0.5);
+  border: none;
+  color: white;
+  font-size: 28px;
+  line-height: 1;
+  width: 56px;
+  height: 80px;
+  cursor: pointer;
+  display: none; /* shown on hover of container */
+  align-items: center;
+  justify-content: center;
+  border-radius: 2px;
+  transition: background 0.18s;
+}
+.scroll-arrow:hover {
+  background: rgba(0, 0, 0, 0.85);
+}
+.scroll-arrow.left {
+  left: 8px;
+}
+.scroll-arrow.right {
+  right: 8px;
+}
+
+/* show arrows when hovering container (desktop) */
+.scroll-container:hover .scroll-arrow {
+  display: flex;
+}
+
+/* mobile: always show smaller arrows */
+@media (max-width: 768px) {
+  .scroll-arrow {
+    display: flex;
+    width: 44px;
+    height: 56px;
+    font-size: 22px;
+  }
+}
+
+/* ===========================
+   Cards (Netflix-style big thumbnails)
+   =========================== */
 .scroll-card {
   min-width: 300px;
   height: 180px;
-  border-radius: 4px;
-  background: url("https://picsum.photos/600/400?random") center/cover no-repeat;
+  border-radius: 6px;
+  background: #222 center/cover no-repeat;
   flex-shrink: 0;
   position: relative;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.28s ease, box-shadow 0.28s ease;
+  display: flex;
+  align-items: flex-end;
+  overflow: hidden;
 }
 .scroll-card:hover {
-  transform: scale(1.15);
+  transform: scale(1.12);
   z-index: 20;
-  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.8);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.8);
 }
 
-/* Dark overlay + text */
+/* overlay at bottom for readable text */
 .card-overlay {
   position: absolute;
   bottom: 0;
-  width: 100%;
-  padding: 10px;
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+  left: 0;
+  right: 0;
+  padding: 12px;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.2));
   color: #fff;
-  font-weight: 600;
+  font-weight: 700;
   font-size: 16px;
 }
 
-/* Responsive */
+/* Footer */
+.footer {
+  text-align: center;
+  color: #808080;
+  font-size: 14px;
+  padding: 20px 0;
+  border-top: 1px solid #222;
+}
+
+/* Responsive tune */
 @media (max-width: 1024px) {
   .banner-headline {
     font-size: 40px;
+  }
+  .scroll-card {
+    min-width: 260px;
+    height: 160px;
   }
 }
 @media (max-width: 768px) {
@@ -273,24 +335,14 @@ body,
     font-size: 28px;
   }
   .content {
-    padding: 20px;
-  }
-  .profile-banner {
-    padding: 0 20px;
+    padding: 12px;
+    margin-top: -60px;
   }
   .banner-content {
-    margin-top: 56px; /* Adjust for smaller navbar height on mobile */
+    margin-top: 56px;
   }
-
-  /* Bootstrap mobile navbar adjustments */
-  .navbar-collapse {
-    background: rgba(0, 0, 0, 0.9);
-    padding: 1rem;
-    margin-top: 0.5rem;
-    border-radius: 4px;
-  }
-
-  .navbar-nav {
-    gap: 10px;
+  .scroll-card {
+    min-width: 220px;
+    height: 140px;
   }
 }
