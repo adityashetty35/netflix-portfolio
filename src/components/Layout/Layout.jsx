@@ -118,7 +118,7 @@ function Layout() {
                 rel="noreferrer"
                 className="custom-btn resume-btn"
               >
-                ▶ Resume
+                &#9654; Resume
               </a>
 
               <a
