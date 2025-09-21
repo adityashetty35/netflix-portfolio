@@ -91,7 +91,7 @@ body,
 .profile-page {
   position: relative;
   width: 100vw;
-  height: 100vh;
+  height: 75vh;
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;

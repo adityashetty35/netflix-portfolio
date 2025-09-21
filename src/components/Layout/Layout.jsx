@@ -114,15 +114,15 @@ function Layout() {
             <div className="banner-buttons">
               <a
                 href="/resume.pdf"
-                className="custom-btn resume-btn"
                 target="_blank"
                 rel="noreferrer"
+                className="custom-btn resume-btn"
               >
                 ▶ Resume
               </a>
 
               <a
-                href="https://linkedin.com"
+                href="https://www.linkedin.com/in/aaditya-sangishetty-08b0b5215/"
                 className="custom-btn linkedin-btn"
                 target="_blank"
                 rel="noreferrer"
@@ -152,12 +152,27 @@ function Layout() {
 
       {/* Content */}
       <main className="content container-fluid mt-4">
+        <section className="section">
+          <h2 className="section-title">Today's Top Picks for Recruiter</h2>
+          <div className="scroll-row">
+            {[
+              "Work Permit",
+              "Skills",
+              "Experience",
+              "Certifications",
+              "Recommendation",
+            ].map((item, idx) => (
+              <div className="scroll-card" key={idx}>
+                <div className="card-body">
+                  <p className="card-text">{item}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
+
         <Outlet />
       </main>
-
-      <div
-        style={{ height: "2000px", background: "linear-gradient(black, gray)" }}
-      ></div>
 
       <footer className="footer text-center py-3">
         <p>© {new Date().getFullYear()} Aditya Shetty | All rights reserved</p>
