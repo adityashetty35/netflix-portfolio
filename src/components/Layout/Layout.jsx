@@ -51,7 +51,7 @@ function Layout() {
           <div className="collapse navbar-collapse" id="navbarNav">
             <ul className="navbar-nav ms-3">
               <li className="nav-item">
-                <Link to="/browse" className="nav-link">
+                <Link to="/" className="nav-link">
                   Home
                 </Link>
               </li>
