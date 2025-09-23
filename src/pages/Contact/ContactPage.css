@@ -1,0 +1,88 @@
+.hireme-page {
+  min-height: 100vh;
+  background: #0d0d0d;
+  color: #fff;
+  font-family: "Netflix Sans", "Helvetica Neue", Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 60px 40px;
+}
+
+/* Hero */
+.hireme-hero {
+  text-align: center;
+  margin: auto 0;
+}
+
+.hireme-hero h1 {
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+.hireme-hero p {
+  font-size: 1.2rem;
+  color: #aaa;
+  margin-bottom: 40px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.6;
+}
+
+/* Buttons */
+.hireme-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.btn {
+  padding: 14px 32px;
+  border-radius: 30px;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.primary-btn {
+  background: #e50914;
+  color: #fff;
+}
+
+.primary-btn:hover {
+  background: #f6121d;
+}
+
+.secondary-btn {
+  border: 1px solid #e50914;
+  background: transparent;
+  color: #fff;
+}
+
+.secondary-btn:hover {
+  background: #e50914;
+}
+
+/* Footer Contacts */
+.hireme-footer {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  font-size: 0.95rem;
+  color: #aaa;
+  margin-top: 60px;
+}
+
+.hireme-footer a {
+  color: #aaa;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.hireme-footer a:hover {
+  color: #e50914;
+}

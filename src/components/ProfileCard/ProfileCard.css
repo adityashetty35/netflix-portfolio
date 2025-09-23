@@ -1,0 +1,33 @@
+.profile-card {
+  text-align: center;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.profile-card img {
+  border-radius: 6px;
+  width: 150px;
+  height: 150px;
+  transition: transform 0.3s ease, border 0.3s ease;
+  cursor: pointer;
+  display: block;
+  margin: 0 auto;
+}
+
+.profile-card:hover {
+  transform: scale(1.05);
+}
+
+.profile-card:hover img {
+  border: 3px solid #fff;
+}
+
+.profile-card p {
+  margin-top: 10px;
+  font-size: 1.2rem;
+  color: #808080;
+  transition: color 0.3s ease;
+}
+
+.profile-card:hover p {
+  color: #fff;
+}

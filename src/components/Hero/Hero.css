@@ -1,0 +1,88 @@
+.profile-page {
+  position: relative;
+  width: 100vw;
+  height: 70vh;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
+}
+
+.profile-banner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.3) 0%,
+    rgba(0, 0, 0, 0.7) 60%,
+    rgba(0, 0, 0, 0.95) 100%
+  );
+  display: flex;
+  align-items: center;
+  padding: 0 60px;
+  box-sizing: border-box;
+}
+
+.banner-content {
+  max-width: 700px;
+  color: #fff;
+  margin-top: 68px; /* offset below navbar */
+}
+
+.banner-headline {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin: 0 0 16px;
+  color: #fff;
+  white-space: nowrap;
+}
+
+.banner-description {
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 20px;
+  color: #e5e5e5;
+}
+
+.banner-buttons {
+  display: flex;
+  gap: 12px;
+}
+
+
+/* Base button */
+.custom-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  width: 142px;
+  height: 43px;
+  font-weight: 700;
+  font-size: 15px;
+  border-radius: 0;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+.resume-btn {
+  background-color: #fff;
+  color: #000;
+}
+.resume-btn:hover {
+  background-color: #6c757d;
+  color: #fff;
+}
+.linkedin-btn {
+  background-color: #fff;
+  color: #000;
+}
+.linkedin-btn:hover {
+  background-color: #0a66c2;
+  color: #fff;
+}

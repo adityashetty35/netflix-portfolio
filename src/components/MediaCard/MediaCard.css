@@ -1,0 +1,44 @@
+/* ===========================
+   MEDIA CARD
+   =========================== */
+.scroll-card {
+  min-width: 300px;
+  height: 180px;
+  border-radius: 6px;
+  background: #222 center/cover no-repeat;
+  flex-shrink: 0;
+  position: relative;
+  transition: transform 0.28s ease, box-shadow 0.28s ease;
+  display: flex;
+  align-items: flex-end;
+  overflow: hidden;
+}
+.scroll-card:hover {
+  transform: scale(1.12);
+  z-index: 20;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.8);
+}
+.card-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 12px;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.2));
+  color: #fff;
+  font-weight: 700;
+  font-size: 16px;
+}
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .scroll-card {
+    min-width: 260px;
+    height: 160px;
+  }
+}
+@media (max-width: 768px) {
+  .scroll-card {
+    min-width: 220px;
+    height: 140px;
+  }
+}

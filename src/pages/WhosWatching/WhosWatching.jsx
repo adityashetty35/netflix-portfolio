@@ -1,6 +1,8 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import "./WhosWatching.css";
+import ProfileCard from "../../components/ProfileCard/ProfileCard";
+
 import recruiterImg from "../../assets/profiles/recruiter.png";
 import developerImg from "../../assets/profiles/developer.png";
 import stalkerImg from "../../assets/profiles/stalker.png";
@@ -17,18 +19,16 @@ function WhosWatching() {
   ];
 
   return (
-    <div className="whos-watching text-center">
-      <h1 className="mb-5">Who’s Watching?</h1>
+    <div className="whos-watching">
+      <h1>Who’s Watching?</h1>
       <div className="profiles-container">
-        {profiles.map((profile, index) => (
-          <div
-            className="profile-card"
-            key={index}
+        {profiles.map((profile) => (
+          <ProfileCard
+            key={profile.name}
+            name={profile.name}
+            image={profile.img}
             onClick={() => navigate(profile.path)}
-          >
-            <img src={profile.img} alt={profile.name} />
-            <p>{profile.name}</p>
-          </div>
+          />
         ))}
       </div>
     </div>

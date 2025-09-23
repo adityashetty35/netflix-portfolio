@@ -1,0 +1,91 @@
+.certifications-page {
+  min-height: 100vh;
+  background: #0d0d0d;
+  padding: 80px 40px;
+  color: #fff;
+  font-family: "Netflix Sans", "Helvetica Neue", Arial, sans-serif;
+}
+
+.certifications-title {
+  text-align: center;
+  font-size: 2.2rem;
+  font-weight: 800;
+  margin-bottom: 50px;
+}
+
+.certifications-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 28px;
+}
+
+.cert-card {
+  background: #181818;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.6);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.cert-card:hover {
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.8);
+}
+
+.cert-image {
+  height: 180px;
+  background-size: cover;
+  background-position: center;
+}
+
+.cert-content {
+  padding: 16px;
+}
+
+.cert-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cert-header h2 {
+  color: #e50914;
+  font-size: 1.2rem;
+  margin: 0;
+}
+
+.cert-year {
+  font-size: 0.9rem;
+  color: #bbb;
+  font-weight: 500;
+}
+
+.cert-content h4 {
+  color: #bbb;
+  font-size: 0.9rem;
+  margin: 8px 0;
+}
+
+.cert-content p {
+  font-size: 0.85rem;
+  color: #ddd;
+  line-height: 1.4;
+  margin-bottom: 12px;
+}
+
+.cert-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.tag {
+  background: #222;
+  color: #e50914;
+  padding: 4px 10px;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 600;
+}

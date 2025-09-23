@@ -1,0 +1,80 @@
+.certifications-page {
+  min-height: 100vh;
+  background: #0d0d0d;
+  padding: 80px 40px;
+  color: #fff;
+  font-family: "Netflix Sans", "Helvetica Neue", Arial, sans-serif;
+}
+
+.certifications-title {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 50px;
+}
+
+.cert-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 24px;
+}
+
+.cert-card {
+  background: #181818;
+  border-radius: 8px;
+  padding: 20px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.6);
+  position: relative;
+  min-height: 140px;
+}
+
+.cert-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 22px rgba(229, 9, 20, 0.8);
+}
+
+.cert-icon {
+  margin-right: 12px;
+}
+
+.cert-info {
+  flex: 1;
+}
+
+.cert-info h2 {
+  font-size: 1rem;
+  font-weight: 700;
+  margin: 0 0 6px;
+  color: #fff;
+}
+
+.cert-info .issuer {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #bbb;
+}
+
+.cert-issued {
+  display: block;
+  font-size: 0.8rem;
+  color: #777;
+  margin-top: 6px;
+}
+
+.cert-link {
+  font-size: 1.2rem;
+  color: #e50914;
+  text-decoration: none;
+  transition: color 0.2s;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.cert-link:hover {
+  color: #fff;
+}
