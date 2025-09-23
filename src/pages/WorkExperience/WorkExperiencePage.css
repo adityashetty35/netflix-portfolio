@@ -1,91 +1,132 @@
-.certifications-page {
+.work-page {
   min-height: 100vh;
   background: #0d0d0d;
-  padding: 80px 40px;
   color: #fff;
+  padding: 80px 40px;
   font-family: "Netflix Sans", "Helvetica Neue", Arial, sans-serif;
 }
 
-.certifications-title {
+.work-title {
   text-align: center;
   font-size: 2.2rem;
+  margin-bottom: 60px;
   font-weight: 800;
-  margin-bottom: 50px;
 }
 
-.certifications-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-  gap: 28px;
+/* Timeline Layout */
+.timeline {
+  position: relative;
+  margin: 0 auto;
+  padding: 0 20px;
+  max-width: 1000px;
 }
 
-.cert-card {
-  background: #181818;
-  border-radius: 8px;
-  overflow: hidden;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.6);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+/* Vertical red line */
+.timeline::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 4px;
+  height: 100%;
+  background: #e50914;
+  z-index: 0;
+}
+
+.timeline-container {
   display: flex;
-  flex-direction: column;
+  justify-content: flex-start;
+  margin-bottom: 50px;
+  position: relative;
+  width: 100%;
 }
 
-.cert-card:hover {
-  transform: translateY(-6px) scale(1.02);
-  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.8);
+.timeline-container.right {
+  justify-content: flex-end;
 }
 
-.cert-image {
-  height: 180px;
-  background-size: cover;
-  background-position: center;
+/* Timeline dot */
+.timeline-dot {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 14px;
+  height: 14px;
+  background: #e50914;
+  border-radius: 50%;
+  z-index: 1;
 }
 
-.cert-content {
-  padding: 16px;
+/* Timeline Card */
+.timeline-card {
+  background: #181818;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+  color: #fff;
+  max-width: 460px;
+  width: 100%;
+  position: relative;
+  z-index: 2;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
-.cert-header {
+.timeline-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 28px rgba(0, 0, 0, 0.6);
+}
+
+/* Card Header: Role + Date */
+.card-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: 6px;
 }
 
-.cert-header h2 {
-  color: #e50914;
+.timeline-card h2 {
   font-size: 1.2rem;
+  color: #e50914;
+  font-weight: 700;
   margin: 0;
 }
 
-.cert-year {
+.timeline-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 24px rgba(229, 9, 20, 0.8);
+}
+
+.timeline-date {
   font-size: 0.9rem;
-  color: #bbb;
+  color: #aaa;
   font-weight: 500;
+  white-space: nowrap;
 }
 
-.cert-content h4 {
-  color: #bbb;
-  font-size: 0.9rem;
-  margin: 8px 0;
+.timeline-card h3 {
+  font-size: 1rem;
+  margin: 4px 0 8px;
+  color: #fff;
+  font-weight: 600;
 }
 
-.cert-content p {
+.tech {
   font-size: 0.85rem;
-  color: #ddd;
-  line-height: 1.4;
+  color: #bbb;
   margin-bottom: 12px;
 }
 
-.cert-tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 6px;
+/* Bullet points */
+.timeline-card ul {
+  margin: 0;
+  padding-left: 20px;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: #ddd;
 }
 
-.tag {
-  background: #222;
-  color: #e50914;
-  padding: 4px 10px;
-  border-radius: 4px;
-  font-size: 0.75rem;
-  font-weight: 600;
+.timeline-card li {
+  margin-bottom: 6px;
 }

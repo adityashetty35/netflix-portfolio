@@ -3,7 +3,7 @@ export const workExperienceData = [
     id: 1,
     role: "Software Developer",
     company: "Neural IT",
-    period: "Aug 2024 – Present | Navi Mumbai, India",
+    period: "Aug 2024 – Present | Mumbai",
     tech: "FastAPI, React, MongoDB, MySQL, NSQ, Redis, Kong API Gateway, CockroachDB",
     description: [
       
@@ -15,7 +15,7 @@ export const workExperienceData = [
     id: 2,
     role: "Software Developer",
     company: "CereLabs",
-    period: "Jun 2022 – Aug 2024 | Mumbai, India",
+    period: "Jun 2022 – Aug 2024 | Mumbai",
     tech: "Python, TensorFlow, OCR, LLM, ML Models",
     description: [
       "Maintained and optimized the Document Masking Bot, deployed at HDFC and Toyota Finance.",

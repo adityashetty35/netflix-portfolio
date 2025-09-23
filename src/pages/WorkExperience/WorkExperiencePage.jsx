@@ -6,15 +6,13 @@ import "./WorkExperiencePage.css";
 function WorkExperiencePage() {
   return (
     <div className="work-page">
-      <h1 className="work-title">📅 Work Experience & Education Timeline</h1>
+      <h1 className="work-title">📅 Work Experience</h1>
 
       <div className="timeline">
         {workExperienceData.map((item, index) => (
           <motion.div
             key={item.id}
-            className={`timeline-container ${
-              index % 2 === 0 ? "left" : "right"
-            }`}
+            className={`timeline-container ${index % 2 === 0 ? "left" : "right"}`}
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.2 }}
@@ -27,7 +25,7 @@ function WorkExperiencePage() {
             <div className="timeline-card">
               <div className="card-header">
                 <h2>{item.role}</h2>
-                <div className="timeline-date">{item.period}</div>
+                <span className="timeline-date">{item.period}</span>
               </div>
               <h3>{item.company}</h3>
               <p className="tech">{item.tech}</p>
