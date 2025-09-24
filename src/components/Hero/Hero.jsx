@@ -1,12 +1,12 @@
 import React from "react";
 import "./Hero.css";
 
-function Hero({ headline, description }) {
+function Hero({ headline, description, backgroundImage }) {
   return (
     <header
       className="profile-page"
       style={{
-        backgroundImage: `url("https://i.giphy.com/media/16u7Ifl2T4zYfQ932F/giphy.gif")`,
+        backgroundImage: `url(${backgroundImage})`,
       }}
     >
       <div className="profile-banner">

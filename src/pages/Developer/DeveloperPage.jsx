@@ -24,6 +24,7 @@ function DeveloperPage() {
       <Hero
         headline="Aaditya Sangishetty - Software Developer"
         description="Passionate and results-driven developer with experience in building scalable, high-impact web applications using Python, FastAPI, React, and modern cloud technologies."
+        backgroundImage="https://media.giphy.com/media/v1.Y2lkPWVjZjA1ZTQ3aThnMmgzOGVmcXM3czJlNHQxYmxjZXp4ZWdxamJxemhpbWZrNGltaSZlcD12MV9naWZzX3JlbGF0ZWQmY3Q9Zw/V4NSR1NG2p0KeJJyr5/giphy.gif"
       />
 
       {/* Content Sections */}

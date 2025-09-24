@@ -24,6 +24,7 @@ function StalkerPage() {
       <Hero
         headline="Aaditya Sangishetty - Software Developer"
         description="Passionate and results-driven developer with experience in building scalable, high-impact web applications using Python, FastAPI, React, and modern cloud technologies."
+        backgroundImage="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExdml6bnY1cHUybWU1c2dwbGJlZGFmeDA1czU3NWlmOTg2cXMyNzJjZyZlcD12MV9naWZzX3NlYXJjaCZjdD1n/GCjIE9C9Eb9V6/giphy.gif"
       />
 
       {/* Content Sections */}
