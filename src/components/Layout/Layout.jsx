@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Outlet, Link, useLocation, useNavigate } from "react-router-dom";
-import logoImg from "../../assets/logos/logo-2.428ef53f18dcf64df8df.svg";
+import logoImg from "../../assets/logos/name.svg";
 import recruiterImg from "../../assets/profiles/recruiter.png";
 import developerImg from "../../assets/profiles/developer.png";
 import stalkerImg from "../../assets/profiles/stalker.png";
@@ -12,7 +12,7 @@ function Layout() {
   const [scrolled, setScrolled] = useState(false);
   const [profileImage, setProfileImage] = useState(recruiterImg); // Default profile image
   const [selectedPage, setSelectedPage] = useState("recruiter"); // Track selected page (default to recruiter)
-  
+
   const location = useLocation(); // Get the current location
   const navigate = useNavigate(); // Use navigate to programmatically navigate
 
@@ -118,7 +118,10 @@ function Layout() {
 
           <div className="d-flex align-items-center navbar-right">
             {/* On clicking Home icon, navigate to the selected page */}
-            <button onClick={handleHomeClick} style={{ border: "none", background: "transparent" }}>
+            <button
+              onClick={handleHomeClick}
+              style={{ border: "none", background: "transparent" }}
+            >
               <img src={profileImage} alt="Profile" className="profile-icon" />
             </button>
           </div>
