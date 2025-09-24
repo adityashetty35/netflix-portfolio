@@ -13,9 +13,10 @@ function Layout() {
   const [profileImage, setProfileImage] = useState(recruiterImg); // Default profile image
   const [selectedPage, setSelectedPage] = useState("recruiter"); // Track selected page (default to recruiter)
 
-  const location = useLocation(); // Get the current location
-  const navigate = useNavigate(); // Use navigate to programmatically navigate
+  const location = useLocation();
+  const navigate = useNavigate();
 
+  // Detect scroll
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 50);
     window.addEventListener("scroll", handleScroll, { passive: true });
@@ -42,14 +43,18 @@ function Layout() {
         setSelectedPage("adventurer");
         break;
       default:
-        setProfileImage(recruiterImg); // Default to recruiter on other pages
+        setProfileImage(recruiterImg);
         setSelectedPage("recruiter");
     }
-  }, [location.pathname]); // Runs whenever the location changes
+  }, [location.pathname]);
 
-  // Handle click on the Home icon (navigate to the selected page)
+  // Profile click → always go to root
+  const handleProfileClick = () => {
+    navigate("/");
+  };
+
+  // Home click → go to selected profile page
   const handleHomeClick = () => {
-    // Redirect to the selected page when clicking on Home
     navigate(`/${selectedPage}`);
   };
 
@@ -66,7 +71,7 @@ function Layout() {
         }}
       >
         <div className="container-fluid">
-          <Link to="/" className="navbar-brand" aria-label="Home">
+          <Link to="/" className="navbar-brand" aria-label="Logo">
             <img src={logoImg} alt="Logo" />
           </Link>
 
@@ -89,9 +94,14 @@ function Layout() {
           <div className="collapse navbar-collapse" id="navbarNav">
             <ul className="navbar-nav ms-3">
               <li className="nav-item">
-                <Link to="/" className="nav-link">
+                {/* Home nav → goes to selected profile */}
+                <button
+                  onClick={handleHomeClick}
+                  className="nav-link btn-link"
+                  style={{ border: "none", background: "transparent" }}
+                >
                   Home
-                </Link>
+                </button>
               </li>
               <li className="nav-item">
                 <Link to="/work-experience" className="nav-link">
@@ -117,9 +127,9 @@ function Layout() {
           </div>
 
           <div className="d-flex align-items-center navbar-right">
-            {/* On clicking Home icon, navigate to the selected page */}
+            {/* Profile → always goes to root */}
             <button
-              onClick={handleHomeClick}
+              onClick={handleProfileClick}
               style={{ border: "none", background: "transparent" }}
             >
               <img src={profileImage} alt="Profile" className="profile-icon" />
