@@ -6,9 +6,8 @@ export const workExperienceData = [
     period: "Aug 2024 – Present | Mumbai",
     tech: "FastAPI, React, MongoDB, MySQL, NSQ, Redis, Kong API Gateway, CockroachDB",
     description: [
-      
       "Developed a scalable microservices-based platform called ‘Entrust’, leveraging FastAPI, React, MongoDB, MySQL, NSQ, Redis, and Kong API Gateway to serve legal and medical use-cases for U.S. attorneys.",
-      "Engineered a chunked-upload service (FastAPI + CockroachDB) to reliably ingest single files >10 GB, cutting transfer failures by 35%.",
+      "Developed and deployed a scalable, microservices-based Human Resource Management System (HRMS) capable of handling 20k+ users, leveraging FastAPI, React, MySQL, MongoDB, NSQ, and Kong API Gateway. Designed core modules including recruitment, onboarding, payroll, attendance, leave management, performance appraisal, employee self-service, and compliance. Implemented centralized authentication, role-based access control, event-driven notifications, and real-time analytics dashboards, ensuring high availability, security, and seamless user experience.",
     ],
   },
   {

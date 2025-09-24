@@ -1,6 +1,10 @@
 import React from "react";
 import { motion } from "framer-motion";
 import "./ProjectsPage.css";
+import caseImg from "../../assets/projects/case.png";
+import hrmsImg from "../../assets/projects/hrms.png";
+import masking from "../../assets/projects/masking.png";
+import summarize from "../../assets/projects/summarize.png";
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -24,25 +28,25 @@ function ProjectsPage() {
     {
       name: "Hoshi HRMS",
       desc: "Enterprise-grade HRMS solution handling 20k+ users. Built with FastAPI, NSQ, MySQL, and MongoDB.",
-      img: "https://picsum.photos/id/1050/600/350",
+      img: hrmsImg,
       tags: ["FastAPI", "NSQ", "MySQL", "MongoDB"],
     },
     {
       name: "Entrust - Case Management",
       desc: "Medical & legal case management platform with scalable microservices architecture.",
-      img: "https://picsum.photos/id/1042/600/350",
+      img: caseImg,
       tags: ["FastAPI", "React", "Redis", "Kong"],
     },
     {
       name: "Document Masking Bot",
       desc: "Deployed at HDFC & Toyota Finance. Sensitive data extraction + masking with 90%+ accuracy.",
-      img: "https://picsum.photos/id/1018/600/350",
+      img: masking,
       tags: ["TensorFlow", "OCR", "Python"],
     },
     {
       name: "Document Summarizer Bot",
       desc: "LLM-powered summarizer bot that reduces review time by 60%.",
-      img: "https://picsum.photos/id/1032/600/350",
+      img: summarize,
       tags: ["LLM", "FastAPI", "NLP"],
     },
   ];
