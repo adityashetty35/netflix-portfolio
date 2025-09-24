@@ -1,7 +1,7 @@
 🎬 Netflix-Inspired Portfolio
 
 A personal portfolio website inspired by Netflix's UI/UX design.  
-Built with **React (via Vite)** and styled using **Bootstrap** for a clean, modern, and responsive interface.
+Built with **React** and styled using **Bootstrap** for a clean, modern, and responsive interface.
 
 ---
 
