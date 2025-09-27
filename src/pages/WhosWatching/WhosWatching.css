@@ -1,12 +1,14 @@
 .whos-watching {
   min-height: 100vh;
-  width: 100vw;
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   background-color: #141414; /* Netflix black */
   color: #808080;
+  padding: 20px; /* prevent content from touching edges on small screens */
+  box-sizing: border-box;
 }
 
 .whos-watching h1 {
@@ -14,6 +16,7 @@
   font-weight: 500;
   color: #fff;
   margin-bottom: 50px;
+  text-align: center;
 }
 
 /* Flexbox layout for profiles */
@@ -31,6 +34,7 @@
 .profile-card img {
   border-radius: 4px;
   width: 150px;
+  max-width: 100%;
   transition: transform 0.3s, border 0.3s;
   cursor: pointer;
 }
@@ -48,4 +52,48 @@
 
 .profile-card p:hover {
   color: #fff;
+}
+
+/* -------------------- */
+/* 📱 Responsive Design */
+/* -------------------- */
+
+/* Tablets */
+@media (max-width: 768px) {
+  .whos-watching h1 {
+    font-size: 2.2rem;
+    margin-bottom: 30px;
+  }
+
+  .profiles-container {
+    gap: 25px;
+  }
+
+  .profile-card img {
+    width: 120px;
+  }
+
+  .profile-card p {
+    font-size: 1rem;
+  }
+}
+
+/* Phones */
+@media (max-width: 480px) {
+  .whos-watching h1 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+  }
+
+  .profiles-container {
+    gap: 20px;
+  }
+
+  .profile-card img {
+    width: 100px;
+  }
+
+  .profile-card p {
+    font-size: 0.9rem;
+  }
 }
