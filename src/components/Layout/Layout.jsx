@@ -12,6 +12,7 @@ function Layout() {
   const [scrolled, setScrolled] = useState(false);
   const [profileImage, setProfileImage] = useState(recruiterImg);
   const [selectedPage, setSelectedPage] = useState("recruiter");
+  const [menuOpen, setMenuOpen] = useState(false);
 
   const location = useLocation();
   const navigate = useNavigate();
@@ -47,7 +48,10 @@ function Layout() {
   }, [location.pathname]);
 
   const handleProfileClick = () => navigate("/");
-  const handleHomeClick = () => navigate(`/${selectedPage}`);
+  const handleHomeClick = () => {
+    navigate(`/${selectedPage}`);
+    setMenuOpen(false);
+  };
 
   return (
     <div className="layout">
@@ -61,7 +65,7 @@ function Layout() {
         }}
       >
         <div className="container-fluid align-items-center">
-          {/* Left: Logo → go to selected profile */}
+          {/* Logo */}
           <button
             onClick={() => navigate(`/${selectedPage}`)}
             className="navbar-brand"
@@ -71,16 +75,13 @@ function Layout() {
             <img src={logoImg} alt="Logo" />
           </button>
 
-          {/* Right row: Hamburger + Profile */}
-          <div className="navbar-actions d-flex align-items-center ms-auto order-2 order-lg-3">
+          {/* Right: Hamburger + Profile */}
+          <div className="navbar-actions d-flex align-items-center ms-auto">
             <button
               className="navbar-toggler me-2"
               type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#navbarNav"
-              aria-controls="navbarNav"
-              aria-expanded="false"
               aria-label="Toggle navigation"
+              onClick={() => setMenuOpen(!menuOpen)}
             >
               <div className="navbar-toggler-icon"></div>
             </button>
@@ -93,46 +94,63 @@ function Layout() {
               <img src={profileImage} alt="Profile" className="profile-icon" />
             </button>
           </div>
-
-          {/* Collapsible menu */}
-          <div
-            className="collapse navbar-collapse order-3 order-lg-2"
-            id="navbarNav"
-          >
-            <ul className="navbar-nav ms-lg-3">
-              <li className="nav-item">
-                <button
-                  onClick={handleHomeClick}
-                  className="nav-link btn-link"
-                  style={{ border: "none", background: "transparent" }}
-                >
-                  Home
-                </button>
-              </li>
-              <li className="nav-item">
-                <Link to="/work-experience" className="nav-link">
-                  Professional
-                </Link>
-              </li>
-              <li className="nav-item">
-                <Link to="/skills" className="nav-link">
-                  Skills
-                </Link>
-              </li>
-              <li className="nav-item">
-                <Link to="/projects" className="nav-link">
-                  Projects
-                </Link>
-              </li>
-              <li className="nav-item">
-                <Link to="/contact-me" className="nav-link">
-                  Hire Me
-                </Link>
-              </li>
-            </ul>
-          </div>
         </div>
       </nav>
+
+      {/* Sidebar Menu for Mobile */}
+      <div className={`sidebar ${menuOpen ? "open" : ""}`}>
+        <button className="close-btn" onClick={() => setMenuOpen(false)}>
+          ×
+        </button>
+        <ul className="sidebar-nav">
+          <li>
+            <button onClick={handleHomeClick} className="nav-link">
+              Home
+            </button>
+          </li>
+          <li>
+            <Link
+              to="/work-experience"
+              className="nav-link"
+              onClick={() => setMenuOpen(false)}
+            >
+              Professional
+            </Link>
+          </li>
+          <li>
+            <Link
+              to="/skills"
+              className="nav-link"
+              onClick={() => setMenuOpen(false)}
+            >
+              Skills
+            </Link>
+          </li>
+          <li>
+            <Link
+              to="/projects"
+              className="nav-link"
+              onClick={() => setMenuOpen(false)}
+            >
+              Projects
+            </Link>
+          </li>
+          <li>
+            <Link
+              to="/contact-me"
+              className="nav-link"
+              onClick={() => setMenuOpen(false)}
+            >
+              Hire Me
+            </Link>
+          </li>
+        </ul>
+      </div>
+
+      {/* Overlay when menu is open */}
+      {menuOpen && (
+        <div className="overlay" onClick={() => setMenuOpen(false)}></div>
+      )}
 
       <Outlet />
     </div>
