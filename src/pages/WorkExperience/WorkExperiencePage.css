@@ -78,7 +78,7 @@
   box-shadow: 0 6px 28px rgba(0, 0, 0, 0.6);
 }
 
-/* Card Header: Role + Date */
+/* Card Header */
 .card-header {
   display: flex;
   justify-content: space-between;
@@ -91,11 +91,6 @@
   color: #e50914;
   font-weight: 700;
   margin: 0;
-}
-
-.timeline-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 24px rgba(229, 9, 20, 0.8);
 }
 
 .timeline-date {
@@ -118,7 +113,6 @@
   margin-bottom: 12px;
 }
 
-/* Bullet points */
 .timeline-card ul {
   margin: 0;
   padding-left: 20px;
@@ -129,4 +123,108 @@
 
 .timeline-card li {
   margin-bottom: 6px;
+}
+
+/* ===========================
+   Responsive Adjustments
+   =========================== */
+
+/* Tablet */
+@media (max-width: 768px) {
+  .work-page {
+    padding: 60px 20px;
+  }
+
+  .work-title {
+    font-size: 1.8rem;
+    margin-bottom: 40px;
+    margin-top: 40px;
+  }
+
+  .timeline::before {
+    left: 30px; /* move line to left */
+    transform: none;
+  }
+
+  .timeline-dot {
+    left: 30px; /* align dots with line */
+    transform: none;
+  }
+
+  .timeline-container,
+  .timeline-container.right {
+    justify-content: flex-start; /* all cards left-aligned */
+    padding-left: 60px; /* space for line + dots */
+  }
+
+  .timeline-card {
+    max-width: 100%;
+    padding: 16px;
+  }
+
+  .timeline-card h2 {
+    font-size: 1rem;
+  }
+
+  .timeline-card h3 {
+    font-size: 0.9rem;
+  }
+
+  .timeline-date {
+    font-size: 0.8rem;
+  }
+
+  .tech {
+    font-size: 0.8rem;
+  }
+
+  .timeline-card ul {
+    font-size: 0.8rem;
+  }
+}
+
+/* Small phones */
+@media (max-width: 480px) {
+  .work-page {
+    padding: 50px 15px;
+  }
+
+  .work-title {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+  }
+
+  .timeline::before {
+    left: 20px;
+  }
+
+  .timeline-dot {
+    left: 20px;
+  }
+
+  .timeline-container {
+    padding-left: 50px;
+    margin-bottom: 30px;
+  }
+
+  .timeline-card {
+    padding: 14px;
+  }
+
+  .timeline-card h2 {
+    font-size: 0.95rem;
+  }
+
+  .timeline-card h3 {
+    font-size: 0.85rem;
+  }
+
+  .timeline-date {
+    font-size: 0.75rem;
+  }
+
+  .tech,
+  .timeline-card ul {
+    font-size: 0.75rem;
+  }
 }
