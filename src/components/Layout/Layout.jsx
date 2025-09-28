@@ -75,6 +75,41 @@ function Layout() {
             <img src={logoImg} alt="Logo" />
           </button>
 
+          {/* Inline links (visible only on desktop) */}
+          <div className="d-none d-lg-flex ms-3">
+            <ul className="navbar-nav">
+              <li className="nav-item">
+                <button
+                  onClick={handleHomeClick}
+                  className="nav-link btn-link"
+                  style={{ border: "none", background: "transparent" }}
+                >
+                  Home
+                </button>
+              </li>
+              <li className="nav-item">
+                <Link to="/work-experience" className="nav-link">
+                  Professional
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link to="/skills" className="nav-link">
+                  Skills
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link to="/projects" className="nav-link">
+                  Projects
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link to="/contact-me" className="nav-link">
+                  Hire Me
+                </Link>
+              </li>
+            </ul>
+          </div>
+
           {/* Right: Hamburger + Profile */}
           <div className="navbar-actions d-flex align-items-center ms-auto">
             <button

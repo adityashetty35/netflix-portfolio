@@ -124,42 +124,18 @@
 .timeline-card li {
   margin-bottom: 6px;
 }
-
-/* ===========================
-   Responsive Adjustments
-   =========================== */
-
 /* Tablet */
 @media (max-width: 768px) {
-  .work-page {
-    padding: 60px 20px;
-  }
-
-  .work-title {
-    font-size: 1.8rem;
-    margin-bottom: 40px;
-    margin-top: 40px;
-  }
-
-  .timeline::before {
-    left: 30px; /* move line to left */
-    transform: none;
-  }
-
-  .timeline-dot {
-    left: 30px; /* align dots with line */
-    transform: none;
-  }
-
-  .timeline-container,
-  .timeline-container.right {
-    justify-content: flex-start; /* all cards left-aligned */
-    padding-left: 60px; /* space for line + dots */
-  }
-
   .timeline-card {
     max-width: 100%;
     padding: 16px;
+    word-wrap: break-word; /* allow long words to wrap */
+  }
+
+  .card-header {
+    flex-direction: column; /* stack role + date vertically */
+    align-items: flex-start;
+    gap: 4px;
   }
 
   .timeline-card h2 {
@@ -172,43 +148,34 @@
 
   .timeline-date {
     font-size: 0.8rem;
+    white-space: normal; /* allow wrapping */
   }
 
   .tech {
     font-size: 0.8rem;
+    margin-bottom: 8px;
   }
 
   .timeline-card ul {
     font-size: 0.8rem;
+    line-height: 1.4;
+    padding-left: 18px; /* tighter bullet indent */
+  }
+
+  .timeline-card li {
+    margin-bottom: 4px;
+    word-break: break-word; /* long words wrap */
   }
 }
 
 /* Small phones */
 @media (max-width: 480px) {
-  .work-page {
-    padding: 50px 15px;
-  }
-
-  .work-title {
-    font-size: 1.5rem;
-    margin-bottom: 30px;
-  }
-
-  .timeline::before {
-    left: 20px;
-  }
-
-  .timeline-dot {
-    left: 20px;
-  }
-
-  .timeline-container {
-    padding-left: 50px;
-    margin-bottom: 30px;
-  }
-
   .timeline-card {
-    padding: 14px;
+    padding: 12px;
+  }
+
+  .card-header {
+    gap: 2px;
   }
 
   .timeline-card h2 {
@@ -223,8 +190,19 @@
     font-size: 0.75rem;
   }
 
-  .tech,
+  .tech {
+    font-size: 0.75rem;
+    margin-bottom: 6px;
+  }
+
   .timeline-card ul {
     font-size: 0.75rem;
+    line-height: 1.3;
+    padding-left: 16px;
+  }
+
+  .timeline-card li {
+    margin-bottom: 3px;
+    word-break: break-word;
   }
 }

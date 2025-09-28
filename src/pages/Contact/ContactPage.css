@@ -86,3 +86,19 @@
 .hireme-footer a:hover {
   color: #e50914;
 }
+
+/* Fix buttons on phones */
+@media (max-width: 480px) {
+  .hireme-buttons {
+    flex-direction: column; /* stack vertically */
+    align-items: center; /* center horizontally */
+    gap: 12px;
+  }
+
+  .btn {
+    width: 100%; /* take full width */
+    max-width: 280px; /* but not too wide */
+    padding: 12px 20px; /* adjust padding for mobile */
+    font-size: 0.9rem;
+  }
+}

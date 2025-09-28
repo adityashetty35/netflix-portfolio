@@ -115,7 +115,7 @@
     text-align: left; /* keep text left aligned */
     margin-top: 0; /* remove desktop navbar offset */
     transform: translateY(
-      -20px
+      60px
     ); /* slight upward adjustment to perfect center */
   }
 
@@ -157,6 +157,8 @@
 
   .banner-headline {
     font-size: 1.5rem;
+    white-space: nowrap;
+    overflow: hidden;
   }
 
   .banner-description {
