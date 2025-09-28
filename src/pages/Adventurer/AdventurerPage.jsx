@@ -23,7 +23,7 @@ function AdventurerPage() {
       {/* Hero Section */}
       <Hero
         headline="Aaditya Sangishetty - Software Developer"
-        description="Software Developer with 3+ years of experience building scalable backend systems, AI-powered solutions, and LLM-driven products for finance, legal, medical, and enterprise domains. Skilled in designing microservices architectures, high-volume data ingestion pipelines, and AI-based document processing tools. Proven track record of reducing operational overhead through automation, improving system reliability, and delivering products used by large organizations and attorneys in the U.S. Adept at working across the stack with Python, FastAPI, React, and modern databases, while leveraging LLMs and machine learning to extract insights from unstructured data. Strong background in DevOps practices, API integrations, and leading backend development for multi-tenant platforms serving thousands of users."
+        description="Software Developer with 3+ years of experience building scalable backend systems, AI-powered solutions, and LLM-driven products across finance, legal, medical, and enterprise domains. Skilled in microservices, automation, and AI-based document processing, with expertise in Python, FastAPI, React, modern databases, and DevOps. Proven track record in reducing overhead, improving reliability, and delivering multi-tenant platforms serving thousands of users."
         backgroundImage="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExc3Z6OW53ZTdoMnM4MWkxZGRmMnZ0eDJoZnlqYmx6Z3hhZHc0c2E0aiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/5kF1QQlD6tKobjO5lw/giphy.gif"
       />
 

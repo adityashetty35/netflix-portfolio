@@ -128,7 +128,7 @@
     text-align: left; /* keep text left aligned */
     margin-top: 0; /* remove desktop navbar offset */
     transform: translateY(
-      60px
+      40px
     ); /* slight upward adjustment to perfect center */
   }
 
