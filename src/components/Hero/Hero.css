@@ -22,8 +22,9 @@
     rgba(0, 0, 0, 0.95) 100%
   );
   display: flex;
-  align-items: flex-end;
-  padding: 0 20px 30px;
+  align-items: flex-end; /* desktop - content at bottom */
+  justify-content: flex-start; /* left aligned */
+  padding: 0 40px 40px; /* desktop padding */
   box-sizing: border-box;
 }
 
@@ -31,6 +32,7 @@
   width: 100%;
   max-width: 600px;
   color: #fff;
+  text-align: left; /* left aligned text */
 }
 
 .banner-headline {
@@ -50,9 +52,10 @@
 /* Buttons */
 .banner-buttons {
   display: flex;
-  flex-direction: column;
-  gap: 10px;
-  width: 100%;
+  flex-direction: row; /* desktop - row layout */
+  gap: 12px;
+  width: auto;
+  margin: 0;
 }
 
 .custom-btn {
@@ -62,13 +65,14 @@
   gap: 6px;
   padding: 10px 14px;
   font-weight: 700;
-  font-size: 0.85rem;
+  font-size: 0.9rem;
   border-radius: 4px;
   border: none;
   cursor: pointer;
   text-decoration: none;
   transition: background-color 0.3s ease, color 0.3s ease;
-  width: 100%;
+  width: auto;
+  min-width: 140px;
 }
 .resume-btn {
   background-color: #fff;
@@ -87,55 +91,86 @@
   color: #fff;
 }
 
-/* Mobile → full screen hero */
+/* Desktop navbar offset */
+@media (min-width: 768px) {
+  .banner-content {
+    margin-top: 68px; /* offset for navbar */
+  }
+}
+
+/* Mobile styles - CONTENT CENTERED VERTICALLY */
 @media (max-width: 767px) {
   .profile-page {
-    height: 100vh; /* full screen */
+    height: 100vh;
+    min-height: 600px;
   }
 
   .profile-banner {
-    padding: 0 16px 40px;
-    align-items: flex-end; /* keep content near bottom */
+    padding: 0 16px; /* remove bottom padding since we're centering */
+    align-items: center; /* center content vertically */
+    justify-content: flex-start; /* keep left aligned horizontally */
+  }
+
+  .banner-content {
+    text-align: left; /* keep text left aligned */
+    margin-top: 0; /* remove desktop navbar offset */
+    transform: translateY(
+      -20px
+    ); /* slight upward adjustment to perfect center */
   }
 
   .banner-headline {
-    font-size: 1.3rem;
+    font-size: 1.8rem;
+    margin: 0 0 15px;
+  }
+
+  .banner-description {
+    font-size: 1rem;
+    margin-bottom: 20px;
+  }
+
+  .banner-buttons {
+    flex-direction: column; /* stack buttons on mobile */
+    gap: 12px;
+    width: 100%;
+    margin: 0; /* keep left aligned */
+  }
+
+  .custom-btn {
+    width: 100%;
+    padding: 12px 16px;
+    font-size: 1rem;
+    min-width: auto;
+    justify-content: flex-start; /* left align button content */
+  }
+}
+
+/* Small mobile devices */
+@media (max-width: 360px) {
+  .profile-page {
+    min-height: 500px;
+  }
+
+  .profile-banner {
+    padding: 0 12px;
+  }
+
+  .banner-headline {
+    font-size: 1.5rem;
   }
 
   .banner-description {
     font-size: 0.9rem;
   }
 
-  .banner-buttons {
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  .custom-btn {
-    width: 100%; /* full width buttons on mobile */
+  .banner-content {
+    transform: translateY(-10px); /* less adjustment for smaller screens */
   }
 }
 
-/* Desktop (>=768px) */
-@media (min-width: 768px) {
-  .profile-banner {
-    padding: 0 40px 40px;
-    align-items: center;
-  }
-
-  .banner-content {
-    margin-top: 68px; /* offset for navbar */
-  }
-
-  .banner-buttons {
-    flex-direction: row;
-    gap: 12px;
-    width: auto;
-  }
-
-  .custom-btn {
-    width: auto;
-    min-width: 140px;
-    font-size: 0.9rem;
+/* Large desktop screens */
+@media (min-width: 1200px) {
+  .profile-page {
+    height: 80vh;
   }
 }
