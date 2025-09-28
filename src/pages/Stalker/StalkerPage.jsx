@@ -23,7 +23,7 @@ function StalkerPage() {
       {/* Hero Section */}
       <Hero
         headline="Aaditya Sangishetty - Software Developer"
-        description="Passionate and results-driven developer with experience in building scalable, high-impact web applications using Python, FastAPI, React, and modern cloud technologies."
+        description="Software Developer with 3+ years of experience building scalable backend systems, AI-powered solutions, and LLM-driven products for finance, legal, medical, and enterprise domains. Skilled in designing microservices architectures, high-volume data ingestion pipelines, and AI-based document processing tools. Proven track record of reducing operational overhead through automation, improving system reliability, and delivering products used by large organizations and attorneys in the U.S. Adept at working across the stack with Python, FastAPI, React, and modern databases, while leveraging LLMs and machine learning to extract insights from unstructured data. Strong background in DevOps practices, API integrations, and leading backend development for multi-tenant platforms serving thousands of users."
         backgroundImage="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExdml6bnY1cHUybWU1c2dwbGJlZGFmeDA1czU3NWlmOTg2cXMyNzJjZyZlcD12MV9naWZzX3NlYXJjaCZjdD1n/GCjIE9C9Eb9V6/giphy.gif"
       />
 

@@ -6,7 +6,9 @@ body,
   margin: 0;
   padding: 0;
   background: black;
-  font-family: "Netflix Sans", "Helvetica Neue", Arial, sans-serif;
+  font-family: Netflix Sans, Helvetica Neue, Segoe UI, Roboto, Ubuntu,
+    sans-serif;
+
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
