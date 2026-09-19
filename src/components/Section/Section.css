@@ -11,7 +11,11 @@
   pointer-events: none;
 }
 
-.content > * {
+/* .content is pulled up over the hero by margin-top, so only the elements that
+   actually need clicks may take them back — anything else would cover the hero buttons. */
+.scroll-container,
+.section-title,
+.see-all {
   pointer-events: auto;
 }
 .content::before {
@@ -37,6 +41,7 @@
   margin: 12px 0;
   z-index: 14;
   position: relative;
+  pointer-events: none;
 }
 .section-title {
   color: #fff;
