@@ -1,5 +1,5 @@
 import React from "react";
-import { motion } from "framer-motion";
+import { motion as Motion } from "framer-motion";
 import { workExperienceData } from "./data";
 import "./WorkExperiencePage.css";
 
@@ -10,7 +10,7 @@ function WorkExperiencePage() {
 
       <div className="timeline">
         {workExperienceData.map((item, index) => (
-          <motion.div
+          <Motion.div
             key={item.id}
             className={`timeline-container ${index % 2 === 0 ? "left" : "right"}`}
             initial={{ opacity: 0, y: 50 }}
@@ -35,7 +35,7 @@ function WorkExperiencePage() {
                 ))}
               </ul>
             </div>
-          </motion.div>
+          </Motion.div>
         ))}
       </div>
     </div>

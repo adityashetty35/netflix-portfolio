@@ -118,7 +118,11 @@ function Layout() {
               aria-label="Toggle navigation"
               onClick={() => setMenuOpen(!menuOpen)}
             >
-              <div className="navbar-toggler-icon"></div>
+              <span className="navbar-toggler-icon" aria-hidden="true">
+                <span></span>
+                <span></span>
+                <span></span>
+              </span>
             </button>
 
             <button

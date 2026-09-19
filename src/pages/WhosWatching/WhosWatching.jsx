@@ -1,6 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import { motion } from "framer-motion";
+import { motion as Motion } from "framer-motion";
 import "./WhosWatching.css";
 import ProfileCard from "../../components/ProfileCard/ProfileCard";
 
@@ -20,23 +20,23 @@ function WhosWatching() {
   ];
 
   return (
-    <motion.div
+    <Motion.div
       className="whos-watching"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.6 }}
     >
-      <motion.h1
+      <Motion.h1
         initial={{ y: -20, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.6, delay: 0.2 }}
       >
         Who’s Watching?
-      </motion.h1>
+      </Motion.h1>
 
       <div className="profiles-container">
         {profiles.map((profile) => (
-          <motion.div
+          <Motion.div
             key={profile.name}
             initial={{ scale: 0.9, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
@@ -47,10 +47,10 @@ function WhosWatching() {
               image={profile.img}
               onClick={() => navigate(profile.path)}
             />
-          </motion.div>
+          </Motion.div>
         ))}
       </div>
-    </motion.div>
+    </Motion.div>
   );
 }
 

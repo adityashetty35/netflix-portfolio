@@ -1,5 +1,5 @@
 import React from "react";
-import { motion } from "framer-motion";
+import { motion as Motion } from "framer-motion";
 import "./ReadingPage.css";
 
 function ReadingPage() {
@@ -31,7 +31,7 @@ function ReadingPage() {
   ];
 
   return (
-    <motion.div
+    <Motion.div
       className="reading-page"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
@@ -47,7 +47,7 @@ function ReadingPage() {
       <h2 className="reading-subtitle">Favorite Reads</h2>
       <div className="books-grid">
         {books.map((book, i) => (
-          <motion.div
+          <Motion.div
             key={book.id}
             className="book-card"
             initial={{ opacity: 0, y: 40 }}
@@ -61,10 +61,10 @@ function ReadingPage() {
               <p className="author">by {book.author}</p>
               <p className="lesson">“{book.lesson}”</p>
             </div>
-          </motion.div>
+          </Motion.div>
         ))}
       </div>
-    </motion.div>
+    </Motion.div>
   );
 }
 

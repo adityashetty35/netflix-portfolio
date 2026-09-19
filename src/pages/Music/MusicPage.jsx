@@ -1,5 +1,5 @@
 import React from "react";
-import { motion } from "framer-motion";
+import { motion as Motion } from "framer-motion";
 import "./MusicPage.css";
 
 function MusicPage() {
@@ -39,7 +39,7 @@ function MusicPage() {
   ];
 
   return (
-    <motion.div
+    <Motion.div
       className="music-page"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
@@ -53,21 +53,21 @@ function MusicPage() {
       <h2 className="music-subtitle">Explore by Genre</h2>
       <div className="genre-buttons">
         {genres.map((genre, i) => (
-          <motion.button
+          <Motion.button
             key={i}
             className="genre-btn"
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.95 }}
           >
             {genre}
-          </motion.button>
+          </Motion.button>
         ))}
       </div>
 
       <h2 className="music-subtitle">Favorite Albums</h2>
       <div className="albums-grid">
         {albums.map((album, i) => (
-          <motion.div
+          <Motion.div
             key={album.id}
             className="album-card"
             initial={{ opacity: 0, y: 40 }}
@@ -80,10 +80,10 @@ function MusicPage() {
               <h3>{album.title}</h3>
               <p>by {album.artist}</p>
             </div>
-          </motion.div>
+          </Motion.div>
         ))}
       </div>
-    </motion.div>
+    </Motion.div>
   );
 }
 

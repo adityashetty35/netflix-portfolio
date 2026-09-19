@@ -41,6 +41,19 @@
   margin-right: 12px;
 }
 
+.education-icon {
+  align-items: center;
+  background: #e50914;
+  border-radius: 6px;
+  color: #fff;
+  display: flex;
+  font-size: 0.75rem;
+  font-weight: 800;
+  height: 38px;
+  justify-content: center;
+  min-width: 38px;
+}
+
 .cert-info {
   flex: 1;
 }

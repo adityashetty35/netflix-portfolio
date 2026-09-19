@@ -23,8 +23,8 @@ function RecruiterPage() {
     <>
       {/* Hero Section */}
       <Hero
-        headline="Aaditya Sangishetty - Software Developer"
-        description="Software Developer with 3+ years of experience building scalable backend systems, AI-powered solutions, and LLM-driven products across finance, legal, medical, and enterprise domains. Skilled in microservices, automation, and AI-based document processing, with expertise in Python, FastAPI, React, modern databases, and DevOps. Proven track record in reducing overhead, improving reliability, and delivering multi-tenant platforms serving thousands of users."
+        headline="Aaditya Sangishetty — Backend Software Engineer"
+        description="Backend Software Engineer with 4+ years designing scalable enterprise systems in Python and FastAPI. I build multi-tenant platforms, distributed services, REST APIs, real-time systems, and AI/LLM workflows—supporting 400+ enterprise clients and nearly 1M requests per day."
         backgroundImage="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExcDRzdjBmb3IzOGEwejVmZ25uMXJ2ZjVyM2pjNWZlMW85dDFtYXJ5ciZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/NTF9D7WxRcu7fcJIZB/giphy.gif"
       />
 

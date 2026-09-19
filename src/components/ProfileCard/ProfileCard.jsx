@@ -8,7 +8,7 @@ function ProfileCard({ name, image, onClick }) {
       role="button"
       tabIndex={0}
       onClick={onClick}
-      onKeyPress={(e) => e.key === "Enter" && onClick()}
+      onKeyDown={(e) => (e.key === "Enter" || e.key === " ") && onClick()}
     >
       <img src={image} alt={name} />
       <p>{name}</p>

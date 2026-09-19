@@ -7,7 +7,7 @@ export const recruiterTopPicks = [
     details: {
       headline: "Technical Skills",
       description:
-        "Experienced in Python, FastAPI, React, MySQL, MongoDB, and cloud deployments.",
+        "Python, Java, JavaScript/TypeScript; FastAPI, Flask, REST APIs, microservices, distributed systems, RAG, and cloud-native operations.",
     },
   },
   {
@@ -18,13 +18,13 @@ export const recruiterTopPicks = [
   },
   {
     id: 3,
-    title: "Certifications",
-    imgUrl: "https://picsum.photos/seed/certifications/1000/562",
+    title: "Education",
+    imgUrl: "https://picsum.photos/seed/education/1000/562",
     path: "/certifications",
     details: {
-      headline: "Certifications",
+      headline: "Education",
       description:
-        "MSCIT, Telecom Sector Skill Council, and other professional achievements.",
+        "B.Sc. Computer Science, PVG College of Science & Technology (2019–2022); S K Somaiya Junior College (2018–2019).",
     },
   },
   {
@@ -35,7 +35,7 @@ export const recruiterTopPicks = [
     details: {
       headline: "Projects",
       description:
-        "Built HRMS, VidFetch, Aadhaar Masking Bot, Digital Bank Statement Bot, and Queryfic notification engine.",
+        "Built Hoshi HRMS, Entrust Case Management, Queryfic, and an enterprise Document Masking Bot.",
     },
   },
   // {
@@ -57,7 +57,7 @@ export const recruiterTopPicks = [
     details: {
       headline: "Contact",
       description:
-        "Email: aaditya@example.com | LinkedIn: linkedin.com/in/aaditya-sangishetty",
+        "aadityashetty35@gmail.com | linkedin.com/in/aaditya-sangishetty-08b0b5215 | github.com/adityashetty35",
     },
   },
 ];

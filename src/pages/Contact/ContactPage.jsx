@@ -1,10 +1,10 @@
 import React from "react";
-import { motion } from "framer-motion";
+import { motion as Motion } from "framer-motion";
 import "./ContactPage.css";
 
 function HireMePage() {
   return (
-    <motion.div
+    <Motion.div
       className="hireme-page"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
@@ -12,22 +12,22 @@ function HireMePage() {
     >
       {/* Hero Section */}
       <div className="hireme-hero">
-        <motion.h1
+        <Motion.h1
           initial={{ y: 40, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.8 }}
         >
           Let’s Work Together
-        </motion.h1>
+        </Motion.h1>
 
-        <motion.p
+        <Motion.p
           initial={{ y: 40, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 1 }}
         >
-          I design and build scalable applications with Python, FastAPI, React,
-          and cloud technologies.
-        </motion.p>
+          Backend Software Engineer with 4+ years building scalable, multi-tenant
+          systems, distributed APIs, real-time applications, and AI-powered workflows.
+        </Motion.p>
 
         <div className="hireme-buttons">
           <a
@@ -66,7 +66,7 @@ function HireMePage() {
         </a>
         <a href="tel:+917977672964">Phone</a>
       </footer>
-    </motion.div>
+    </Motion.div>
   );
 }
 

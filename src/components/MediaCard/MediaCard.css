@@ -12,6 +12,19 @@
   display: flex;
   align-items: flex-end;
   overflow: hidden;
+  border: 0;
+  padding: 0;
+  color: inherit;
+  cursor: pointer;
+  text-align: left;
+}
+
+.scroll-card:focus-visible,
+.custom-btn:focus-visible,
+.project-card:focus-visible,
+.profile-card:focus-visible {
+  outline: 3px solid #fff;
+  outline-offset: 3px;
 }
 .scroll-card:hover {
   transform: scale(1.12);
