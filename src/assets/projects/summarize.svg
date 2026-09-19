@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+  <defs>
+    <linearGradient id="bg-rag" x1="0" y1="0" x2="800" y2="450" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#0d0d0d"/>
+      <stop offset="1" stop-color="#000000"/>
+    </linearGradient>
+    <radialGradient id="glow-rag" cx="0.5" cy="0.5" r="0.65">
+      <stop offset="0" stop-color="#e50914" stop-opacity="0.32"/>
+      <stop offset="1" stop-color="#e50914" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="800" height="450" fill="url(#bg-rag)"/>
+  <rect width="800" height="450" fill="url(#glow-rag)"/>
+
+  <g stroke="#3a3a3a" stroke-width="1" opacity="0.35">
+    <line x1="0" y1="110" x2="800" y2="110"/>
+    <line x1="0" y1="220" x2="800" y2="220"/>
+    <line x1="0" y1="330" x2="800" y2="330"/>
+  </g>
+
+  <!-- neural mesh -->
+  <g stroke="#e50914" stroke-width="1.2" opacity="0.5">
+    <line x1="150" y1="150" x2="300" y2="120"/>
+    <line x1="150" y1="150" x2="300" y2="220"/>
+    <line x1="150" y1="260" x2="300" y2="120"/>
+    <line x1="150" y1="260" x2="300" y2="220"/>
+    <line x1="150" y1="260" x2="300" y2="310"/>
+    <line x1="300" y1="120" x2="450" y2="180"/>
+    <line x1="300" y1="220" x2="450" y2="180"/>
+    <line x1="300" y1="220" x2="450" y2="270"/>
+    <line x1="300" y1="310" x2="450" y2="270"/>
+  </g>
+  <g fill="#e5e5e5">
+    <circle cx="150" cy="150" r="8"/>
+    <circle cx="150" cy="260" r="8"/>
+    <circle cx="300" cy="120" r="8"/>
+    <circle cx="300" cy="220" r="8"/>
+    <circle cx="300" cy="310" r="8"/>
+    <circle cx="450" cy="180" r="8"/>
+    <circle cx="450" cy="270" r="8"/>
+  </g>
+
+  <!-- chat bubble -->
+  <g transform="translate(500,110)">
+    <rect x="0" y="0" width="230" height="130" rx="18" fill="#181818" stroke="#e50914" stroke-width="2"/>
+    <path d="M 30 130 L 30 165 L 70 130 Z" fill="#181818" stroke="#e50914" stroke-width="2"/>
+    <line x1="26" y1="35" x2="200" y2="35" stroke="#8f8f8f" stroke-width="6"/>
+    <line x1="26" y1="60" x2="180" y2="60" stroke="#6a6a6a" stroke-width="6"/>
+    <line x1="26" y1="85" x2="150" y2="85" stroke="#6a6a6a" stroke-width="6"/>
+  </g>
+
+  <text x="60" y="115" font-family="Helvetica, Arial, sans-serif" font-size="30" font-weight="800" fill="#ffffff">QUERYFIC</text>
+  <text x="60" y="143" font-family="Helvetica, Arial, sans-serif" font-size="14" font-weight="500" fill="#c9c9c9" letter-spacing="2">RAG · LLM · KNOWLEDGE ASSISTANT</text>
+</svg>

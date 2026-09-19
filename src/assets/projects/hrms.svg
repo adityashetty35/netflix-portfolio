@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+  <defs>
+    <linearGradient id="bg-hrms" x1="0" y1="0" x2="800" y2="450" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#1a0203"/>
+      <stop offset="0.55" stop-color="#0d0d0d"/>
+      <stop offset="1" stop-color="#000000"/>
+    </linearGradient>
+    <radialGradient id="glow-hrms" cx="0.5" cy="0.42" r="0.6">
+      <stop offset="0" stop-color="#e50914" stop-opacity="0.35"/>
+      <stop offset="1" stop-color="#e50914" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="node-fill" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ff3b3b"/>
+      <stop offset="1" stop-color="#b0060f"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="800" height="450" fill="url(#bg-hrms)"/>
+  <rect width="800" height="450" fill="url(#glow-hrms)"/>
+
+  <g stroke="#3a3a3a" stroke-width="1" opacity="0.35">
+    <line x1="0" y1="90" x2="800" y2="90"/>
+    <line x1="0" y1="180" x2="800" y2="180"/>
+    <line x1="0" y1="270" x2="800" y2="270"/>
+    <line x1="0" y1="360" x2="800" y2="360"/>
+  </g>
+
+  <g stroke="#e50914" stroke-width="1.5" opacity="0.55" fill="none">
+    <line x1="400" y1="180" x2="220" y2="290"/>
+    <line x1="400" y1="180" x2="400" y2="300"/>
+    <line x1="400" y1="180" x2="580" y2="290"/>
+    <line x1="220" y1="290" x2="150" y2="350"/>
+    <line x1="220" y1="290" x2="260" y2="350"/>
+    <line x1="580" y1="290" x2="540" y2="350"/>
+    <line x1="580" y1="290" x2="650" y2="350"/>
+  </g>
+
+  <circle cx="400" cy="150" r="34" fill="url(#node-fill)"/>
+  <circle cx="400" cy="150" r="34" fill="none" stroke="#ffffff" stroke-opacity="0.25" stroke-width="2"/>
+
+  <g fill="#f5f5f5">
+    <circle cx="220" cy="290" r="22"/>
+    <circle cx="400" cy="300" r="22"/>
+    <circle cx="580" cy="290" r="22"/>
+  </g>
+
+  <g fill="#8f8f8f">
+    <circle cx="150" cy="350" r="14"/>
+    <circle cx="260" cy="350" r="14"/>
+    <circle cx="540" cy="350" r="14"/>
+    <circle cx="650" cy="350" r="14"/>
+  </g>
+
+  <text x="400" y="157" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="18" font-weight="700" fill="#fff">HR</text>
+
+  <text x="60" y="115" font-family="Helvetica, Arial, sans-serif" font-size="30" font-weight="800" fill="#ffffff" letter-spacing="1">HOSHI HRMS</text>
+  <text x="60" y="143" font-family="Helvetica, Arial, sans-serif" font-size="14" font-weight="500" fill="#c9c9c9" letter-spacing="2">MULTI-TENANT · CLOUD-NATIVE</text>
+</svg>

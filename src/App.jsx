@@ -1,5 +1,6 @@
 import { Routes, Route } from "react-router-dom";
 import Layout from "./components/Layout/Layout";
+import ScrollToTop from "./components/ScrollToTop/ScrollToTop";
 import WhosWatching from "./pages/WhosWatching/WhosWatching";
 import RecruiterPage from "./pages/Recruiter/RecruiterPage";
 import DeveloperPage from "./pages/Developer/DeveloperPage";
@@ -18,29 +19,32 @@ import ReadingPage from "./pages/Reading/ReadingPage";
 
 function App() {
   return (
-    <Routes>
-      <Route path="/" element={<WhosWatching />} />
-      <Route element={<Layout />}>
-        <Route path="/recruiter" element={<RecruiterPage />} />
-        <Route path="/developer" element={<DeveloperPage />} />
-        <Route path="/stalker" element={<StalkerPage />} />
-        <Route path="/adventurer" element={<AdventurerPage />} />
+    <>
+      <ScrollToTop />
+      <Routes>
+        <Route path="/" element={<WhosWatching />} />
+        <Route element={<Layout />}>
+          <Route path="/recruiter" element={<RecruiterPage />} />
+          <Route path="/developer" element={<DeveloperPage />} />
+          <Route path="/stalker" element={<StalkerPage />} />
+          <Route path="/adventurer" element={<AdventurerPage />} />
 
-        {/* Navbar links */}
-        <Route path="/work-experience" element={<WorkExperiencePage />} />
-        <Route path="/skills" element={<SkillsPage />} />
-        <Route path="/projects" element={<ProjectsPage />} />
-        <Route path="/contact-me" element={<ContactPage />} />
+          {/* Navbar links */}
+          <Route path="/work-experience" element={<WorkExperiencePage />} />
+          <Route path="/skills" element={<SkillsPage />} />
+          <Route path="/projects" element={<ProjectsPage />} />
+          <Route path="/contact-me" element={<ContactPage />} />
 
-        {/* cards links */}
-        <Route path="/certifications" element={<CertificationsPage />} />
-        <Route path="/music" element={<MusicPage />} />
-        <Route path="/reading" element={<ReadingPage />} />
+          {/* cards links */}
+          <Route path="/certifications" element={<CertificationsPage />} />
+          <Route path="/music" element={<MusicPage />} />
+          <Route path="/reading" element={<ReadingPage />} />
 
-        {/* Dynamic detail */}
-        <Route path="/:profile/:section" element={<DetailPage />} />
-      </Route>
-    </Routes>
+          {/* Dynamic detail */}
+          <Route path="/:profile/:section" element={<DetailPage />} />
+        </Route>
+      </Routes>
+    </>
   );
 }
 
