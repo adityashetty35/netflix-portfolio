@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+  <defs>
+    <linearGradient id="sk-bg" x1="0" y1="0" x2="800" y2="450" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#1a0203"/>
+      <stop offset="0.6" stop-color="#0d0d0d"/>
+      <stop offset="1" stop-color="#000000"/>
+    </linearGradient>
+    <radialGradient id="sk-glow" cx="0.5" cy="0.5" r="0.6">
+      <stop offset="0" stop-color="#e50914" stop-opacity="0.32"/>
+      <stop offset="1" stop-color="#e50914" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="800" height="450" fill="url(#sk-bg)"/>
+  <rect width="800" height="450" fill="url(#sk-glow)"/>
+  <g stroke="#3a3a3a" stroke-width="1" opacity="0.3">
+    <line x1="0" y1="112" x2="800" y2="112"/>
+    <line x1="0" y1="225" x2="800" y2="225"/>
+    <line x1="0" y1="338" x2="800" y2="338"/>
+  </g>
+
+  <g fill="none" stroke="#ffffff" stroke-width="14" stroke-linecap="round" stroke-linejoin="round">
+    <polyline points="250,150 180,225 250,300"/>
+    <polyline points="550,150 620,225 550,300"/>
+  </g>
+  <line x1="470" y1="130" x2="330" y2="320" stroke="#e50914" stroke-width="14" stroke-linecap="round"/>
+
+  <g fill="#e50914">
+    <circle cx="400" cy="225" r="0"/>
+  </g>
+</svg>

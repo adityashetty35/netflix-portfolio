@@ -2,10 +2,7 @@ import { Routes, Route } from "react-router-dom";
 import Layout from "./components/Layout/Layout";
 import ScrollToTop from "./components/ScrollToTop/ScrollToTop";
 import WhosWatching from "./pages/WhosWatching/WhosWatching";
-import RecruiterPage from "./pages/Recruiter/RecruiterPage";
-import DeveloperPage from "./pages/Developer/DeveloperPage";
-import StalkerPage from "./pages/Stalker/StalkerPage";
-import AdventurerPage from "./pages/Adventurer/AdventurerPage";
+import ProfilePage from "./pages/Profile/ProfilePage";
 import DetailPage from "./pages/DetailPage/DetailPage";
 
 // ✅ Create these placeholder pages
@@ -24,10 +21,13 @@ function App() {
       <Routes>
         <Route path="/" element={<WhosWatching />} />
         <Route element={<Layout />}>
-          <Route path="/recruiter" element={<RecruiterPage />} />
-          <Route path="/developer" element={<DeveloperPage />} />
-          <Route path="/stalker" element={<StalkerPage />} />
-          <Route path="/adventurer" element={<AdventurerPage />} />
+          <Route path="/recruiter" element={<ProfilePage profile="recruiter" />} />
+          <Route path="/developer" element={<ProfilePage profile="developer" />} />
+          <Route path="/stalker" element={<ProfilePage profile="stalker" />} />
+          <Route
+            path="/adventurer"
+            element={<ProfilePage profile="adventurer" />}
+          />
 
           {/* Navbar links */}
           <Route path="/work-experience" element={<WorkExperiencePage />} />

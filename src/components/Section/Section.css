@@ -66,6 +66,8 @@
 }
 .scroll-row {
   display: flex;
+  flex: 1;
+  min-width: 0;
   gap: 12px;
   overflow-x: auto;
   padding: 20px 0;

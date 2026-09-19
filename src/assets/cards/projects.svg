@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+  <defs>
+    <linearGradient id="pr-bg" x1="0" y1="0" x2="800" y2="450" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#1a0203"/>
+      <stop offset="0.6" stop-color="#0d0d0d"/>
+      <stop offset="1" stop-color="#000000"/>
+    </linearGradient>
+    <radialGradient id="pr-glow" cx="0.5" cy="0.45" r="0.62">
+      <stop offset="0" stop-color="#e50914" stop-opacity="0.3"/>
+      <stop offset="1" stop-color="#e50914" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="800" height="450" fill="url(#pr-bg)"/>
+  <rect width="800" height="450" fill="url(#pr-glow)"/>
+  <g stroke="#3a3a3a" stroke-width="1" opacity="0.3">
+    <line x1="0" y1="112" x2="800" y2="112"/>
+    <line x1="0" y1="338" x2="800" y2="338"/>
+  </g>
+
+  <g transform="translate(400,225)">
+    <g fill="#181818" stroke="#e5e5e5" stroke-width="6">
+      <rect x="-190" y="-115" width="170" height="105" rx="12"/>
+      <rect x="20" y="-115" width="170" height="105" rx="12"/>
+      <rect x="20" y="10" width="170" height="105" rx="12"/>
+    </g>
+    <rect x="-190" y="10" width="170" height="105" rx="12" fill="#181818" stroke="#e50914" stroke-width="6"/>
+
+    <g stroke="#6a6a6a" stroke-width="7" stroke-linecap="round">
+      <line x1="-165" y1="-80" x2="-75" y2="-80"/>
+      <line x1="-165" y1="-55" x2="-110" y2="-55"/>
+      <line x1="45" y1="-80" x2="135" y2="-80"/>
+      <line x1="45" y1="-55" x2="100" y2="-55"/>
+      <line x1="45" y1="45" x2="135" y2="45"/>
+      <line x1="45" y1="70" x2="100" y2="70"/>
+    </g>
+    <g stroke="#e50914" stroke-width="7" stroke-linecap="round">
+      <line x1="-165" y1="45" x2="-75" y2="45"/>
+      <line x1="-165" y1="70" x2="-110" y2="70"/>
+    </g>
+  </g>
+</svg>
