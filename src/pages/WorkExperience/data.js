@@ -1,7 +1,7 @@
 export const workExperienceData = [
   {
     id: 1,
-    role: "Python Developer",
+    role: "Senior Python Developer",
     company: "Neural IT Pvt. Ltd.",
     period: "Aug 2024 – Present | Navi Mumbai",
     tech: "Python, FastAPI, React, React Native, MySQL, MongoDB, Redis, NSQ, Centrifugo, Docker, Kubernetes, Kong, Prometheus, Grafana",
