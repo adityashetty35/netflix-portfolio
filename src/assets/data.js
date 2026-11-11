@@ -29,7 +29,7 @@ const catalog = {
     details: {
       headline: "Experience",
       description:
-        "4+ years building enterprise backends — currently Python Developer at Neural IT, previously Software Developer at Cerelabs.",
+        "4+ years building enterprise backends — currently Senior Python Developer at Neural IT, previously Software Developer at Cerelabs.",
     },
   },
   education: {
@@ -92,9 +92,9 @@ const catalog = {
 const profileConfig = {
   recruiter: {
     hero: {
-      headline: "Aaditya Sangishetty — Backend Software Engineer",
+      headline: "Aaditya Sangishetty — Senior Python Developer",
       description:
-        "Backend Software Engineer with 4+ years designing scalable enterprise systems in Python and FastAPI. I build multi-tenant platforms, distributed services, REST APIs, real-time systems, and AI/LLM workflows—supporting 400+ enterprise clients and nearly 1M requests per day.",
+        "Senior Python Developer with 4+ years designing scalable enterprise systems in Python and FastAPI. I build multi-tenant platforms, distributed services, REST APIs, real-time systems, and AI/LLM workflows—supporting 400+ enterprise clients and nearly 1M requests per day.",
       backgroundImage:
         "https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExcDRzdjBmb3IzOGEwejVmZ25uMXJ2ZjVyM2pjNWZlMW85dDFtYXJ5ciZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/NTF9D7WxRcu7fcJIZB/giphy.gif",
     },
