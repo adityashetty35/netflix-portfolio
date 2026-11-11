@@ -25,7 +25,7 @@ function HireMePage() {
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 1 }}
         >
-          Backend Software Engineer with 4+ years building scalable, multi-tenant
+          Senior Python Developer with 4+ years building scalable, multi-tenant
           systems, distributed APIs, real-time applications, and AI-powered workflows.
         </Motion.p>
 
